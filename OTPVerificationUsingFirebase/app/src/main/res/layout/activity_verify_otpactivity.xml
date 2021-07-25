@@ -150,6 +150,7 @@
                 android:textColor="#333333"
                 android:textSize="15sp"/>
           <TextView
+              android:id="@+id/tvResendOTP"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginStart="5dp"
@@ -158,15 +159,27 @@
               android:textSize="15sp"
               android:textStyle="bold"/>
         </LinearLayout>
-        <Button
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_btn"
-            android:layout_margin="30dp"
-            android:id="@+id/btnVerify"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:text="Verify"/>
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_btn"
+                android:layout_margin="30dp"
+                android:id="@+id/btnVerify"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Verify"/>
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+        </FrameLayout>
+
     </LinearLayout>
 
 </ScrollView>
