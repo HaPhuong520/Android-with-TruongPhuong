@@ -1,0 +1,2 @@
+rootProject.name = "OTPVerificationUsingFirebase"
+include ':app'
