@@ -37,20 +37,23 @@ public class MainActivity extends AppCompatActivity {
         list2.add(new PhoTo(R.drawable.img_2));
         list2.add(new PhoTo(R.drawable.img_1));
 
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_GRID,list));
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_GRID,list2));
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_LARGE,list));
+        listPhotos.add(new ListPhoto(list,ListPhotoAdapter.TYPE_LARGE));
+        listPhotos.add(new ListPhoto(list2,ListPhotoAdapter.TYPE_GRID));
+        listPhotos.add(new ListPhoto(list,ListPhotoAdapter.TYPE_LARGE));
 
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_GRID,list));
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_GRID,list2));
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_LARGE,list));
+        listPhotos.add(new ListPhoto(list,ListPhotoAdapter.TYPE_LARGE));
+        listPhotos.add(new ListPhoto(list2,ListPhotoAdapter.TYPE_GRID));
+        listPhotos.add(new ListPhoto(list,ListPhotoAdapter.TYPE_LARGE));
 
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_GRID,list));
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_GRID,list2));
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_LARGE,list));
+        listPhotos.add(new ListPhoto(list,ListPhotoAdapter.TYPE_LARGE));
+        listPhotos.add(new ListPhoto(list2,ListPhotoAdapter.TYPE_GRID));
+        listPhotos.add(new ListPhoto(list,ListPhotoAdapter.TYPE_LARGE));
 
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_GRID,list));
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_GRID,list2));
-        listPhotos.add(new ListPhoto(ListPhotoAdapter.TYPE_LARGE,list));
+        listPhotos.add(new ListPhoto(list,ListPhotoAdapter.TYPE_LARGE));
+        listPhotos.add(new ListPhoto(list2,ListPhotoAdapter.TYPE_GRID));
+        listPhotos.add(new ListPhoto(list,ListPhotoAdapter.TYPE_LARGE));
+
+        return  listPhotos;
+
     }
 }

@@ -9,7 +9,7 @@ public class ListPhoto {
 
     public ListPhoto(List<PhoTo> photos, int type) {
         this.photos = photos;
-        this.Type = type;
+        Type = type;
     }
 
     public List<PhoTo> getPhotos() {
