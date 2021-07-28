@@ -14,7 +14,7 @@ public class ListPhotoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     public static final int TYPE_GRID=1;
     public static final int TYPE_LARGE=2;
     private List<ListPhoto> mlistPhoto;
-    public void sendData(List<ListPhoto> listPhotos)
+    public void setData(List<ListPhoto> listPhotos)
     {
         this.mlistPhoto=listPhotos;
         notifyDataSetChanged();
@@ -37,7 +37,7 @@ public class ListPhotoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         else if(TYPE_LARGE==viewType)
         {
             View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_photo_large,parent,false);
-            return new PhotoLargeViewHolder();
+            return new PhotoLargeViewHolder(view);
         }
         return null;
     }
