@@ -20,7 +20,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_2"/>
+        android:src="@drawable/img_not_avaiable"/>
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
