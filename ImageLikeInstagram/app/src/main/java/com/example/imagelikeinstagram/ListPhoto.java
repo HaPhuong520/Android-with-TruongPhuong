@@ -2,18 +2,29 @@ package com.example.imagelikeinstagram;
 
 import java.util.List;
 
+
 public class ListPhoto {
-    private List<PhoTo> list;
+    private List<PhoTo> photos;
+    private int Type;
 
-    public ListPhoto(List<PhoTo> list) {
-        this.list = list;
+    public ListPhoto(List<PhoTo> photos, int type) {
+        this.photos = photos;
+        this.Type = type;
     }
 
-    public List<PhoTo> getList() {
-        return list;
+    public List<PhoTo> getPhotos() {
+        return photos;
     }
 
-    public void setList(List<PhoTo> list) {
-        this.list = list;
+    public void setPhotos(List<PhoTo> photos) {
+        this.photos = photos;
+    }
+
+    public int getType() {
+        return Type;
+    }
+
+    public void setType(int type) {
+        Type = type;
     }
 }
