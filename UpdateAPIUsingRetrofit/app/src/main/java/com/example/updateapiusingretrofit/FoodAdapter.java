@@ -20,6 +20,7 @@ public class FoodAdapter extends RecyclerView.Adapter <FoodAdapter.ViewHolder>{
     List<Food> list = new ArrayList<>();
     Context context;
     IOnClickItem iOnClickItem;
+
     public void setIOnClickItem(IOnClickItem iOnClickItem){
         this.iOnClickItem = iOnClickItem;
     }
@@ -32,8 +33,7 @@ public class FoodAdapter extends RecyclerView.Adapter <FoodAdapter.ViewHolder>{
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.demo_food, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.demo_food,parent,false);
         return new ViewHolder(view);
     }
 
@@ -45,7 +45,7 @@ public class FoodAdapter extends RecyclerView.Adapter <FoodAdapter.ViewHolder>{
         holder.image_Food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               iOnClickItem.iClickItemImage(food);
+                iOnClickItem.iClickItemImage(food);
             }
         });
 
@@ -57,8 +57,8 @@ public class FoodAdapter extends RecyclerView.Adapter <FoodAdapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView image_Food;
         TextView foodName;
+        ImageView image_Food;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             image_Food = itemView.findViewById(R.id.img_food_demo);

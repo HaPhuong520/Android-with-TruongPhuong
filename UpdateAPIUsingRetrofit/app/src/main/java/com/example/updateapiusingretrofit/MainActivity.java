@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-
         rcvFood = findViewById(R.id.rcvFood);
         rcvFood.setHasFixedSize(true);
         rcvFood.setLayoutManager(new LinearLayoutManager(this));

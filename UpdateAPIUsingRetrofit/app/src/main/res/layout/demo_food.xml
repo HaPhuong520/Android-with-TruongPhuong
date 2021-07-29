@@ -6,12 +6,13 @@
     android:background="@drawable/fix_button"
     android:padding="10dp"
     android:layout_margin="10dp">
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/img_food_demo"
-        android:layout_margin="10dp">
-    </ImageView>
+        android:layout_margin="10dp"
+        android:src="@drawable/pic1">
+    </de.hdodenhof.circleimageview.CircleImageView>
     <TextView
         android:id="@+id/tvFoodName"
         android:layout_width="wrap_content"
