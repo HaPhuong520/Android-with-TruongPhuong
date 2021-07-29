@@ -23,11 +23,7 @@ public class FoodAdapter extends RecyclerView.Adapter <FoodAdapter.ViewHolder>{
     public void setIOnClickItem(IOnClickItem iOnClickItem){
         this.iOnClickItem = iOnClickItem;
     }
-//    IOnClickItem mIOnClickItem;
 
-//    public void setmIOnClickItem(IOnClickItem mIOnClickItem) {
-//        this.mIOnClickItem = mIOnClickItem;
-//    }
     public FoodAdapter(List<Food> list, Context context) {
         this.list = list;
         this.context = context;

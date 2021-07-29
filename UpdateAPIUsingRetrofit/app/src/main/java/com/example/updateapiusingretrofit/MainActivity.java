@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 List<Food> foodList = response.body();
-                FoodAdapter foodAdapter = new FoodAdapter(foodList,MainActivity.this);
+                foodAdapter = new FoodAdapter(foodList,MainActivity.this);
                 rcvFood.setAdapter(foodAdapter);
 
 

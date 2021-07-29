@@ -19,6 +19,7 @@ public class MainFood extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_food);
+        AnhXa();
         Intent intent=getIntent();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(String.valueOf(intent.getStringExtra("foodName")));
@@ -27,7 +28,7 @@ public class MainFood extends AppCompatActivity {
         tv_nutrition.setText(String.valueOf(intent.getStringExtra("nutrition")));
         tv_material.setText(String.valueOf(intent.getStringExtra("material")));
         tv_food_name.setText(String.valueOf(intent.getStringExtra("foodName")));
-        AnhXa();
+
     }
 
     private void AnhXa() {
