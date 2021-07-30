@@ -7,9 +7,13 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-
-
-    
+    <Lo
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/internet_no"
+        tools:ignore="MissingClass" />
 
 
     <Button
