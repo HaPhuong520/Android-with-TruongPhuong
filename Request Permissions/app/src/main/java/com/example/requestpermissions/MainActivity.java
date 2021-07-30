@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         };
         TedPermission.with(this)
                 .setPermissionListener(permissionListener)
-                .setDeniedMessage("kdsknvn")
+                .setDeniedMessage("If you reject permission, you can not use this service\n\nPlease turn on permission at [Setting] > [Permission]")
                 .setPermissions(Manifest.permission.CAMERA,Manifest.permission.READ_EXTERNAL_STORAGE)
                 .check();
     }
