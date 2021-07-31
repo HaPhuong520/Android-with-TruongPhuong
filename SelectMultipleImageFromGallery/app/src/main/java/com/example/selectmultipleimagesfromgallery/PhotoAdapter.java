@@ -38,9 +38,12 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHol
     @Override
     public void onBindViewHolder(@NonNull PhotoAdapter.PhotoViewHolder holder, int position) {
         Uri uri = listPhoto.get(position);
+        if(uri == null)
+            return;
         try {
             Bitmap bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(),uri);
-            holder.imagePhoto.setImageBitmap(bitmap);
+            if(bitmap != null)
+                 holder.imagePhoto.setImageBitmap(bitmap);
         } catch (IOException e) {
             e.printStackTrace();
         }

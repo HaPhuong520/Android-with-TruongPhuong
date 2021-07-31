@@ -34,10 +34,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
         AnhXa();
+
         photoAdapter = new PhotoAdapter(this);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3, LinearLayoutManager.VERTICAL,false);
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);
+//        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3, LinearLayoutManager.VERTICAL,false);
         rcvImagePhoto.setLayoutManager(gridLayoutManager);
-        rcvImagePhoto.setFocusable(false);
+//        rcvImagePhoto.setFocusable(false);
         rcvImagePhoto.setAdapter(photoAdapter);
 
         btnSelectImage.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         PermissionListener permissionlistener = new PermissionListener() {
             @Override
             public void onPermissionGranted() {
+
                 openBottomPicker();
             }
             @Override
@@ -64,11 +68,23 @@ public class MainActivity extends AppCompatActivity {
         TedPermission.with(this)
                 .setPermissionListener(permissionlistener)
                 .setDeniedMessage("If you reject permission,you can not use this service\n\nPlease turn on permissions at [Setting] > [Permission]")
-                .setPermissions(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE)
+                .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA)
                 .check();
     }
     private void openBottomPicker() {
-
+        TedBottomPicker.with(MainActivity.this)
+                .setPeekHeight(1600)
+                .showTitle(false)
+                .setCompleteButtonText("Done")
+                .setEmptySelectionText("No Select")
+                .showMultiImage(new TedBottomSheetDialogFragment.OnMultiImageSelectedListener() {
+                    @Override
+                    public void onImagesSelected(List<Uri> uriList) {
+                       if (uriList != null && !uriList.isEmpty()){
+                           photoAdapter.setData(uriList);
+                       }
+                    }
+                });
 //        TedBottomPicker.OnMultiImageSelectedListener listener = new TedBottomPicker.OnMultiImageSelectedListener() {
 //            @Override
 //            public void onImagesSelected(List<Uri> uriList) {
