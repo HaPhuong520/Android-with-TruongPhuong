@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void reg(View view){
-        String username=findViewById(R.id.username).getText().toString();
+        String username=((EditText)findViewById(R.id.username)).getText().toString();
         ProgressBar progressBar=findViewById(R.id.progress);
         progressBar.setVisibility(View.VISIBLE);
         String url="";
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
     }
     public void login(View view){
-        String username=findViewById(R.id.username).getText().toString();
+        String username=((EditText)findViewById(R.id.username)).getText().toString();
         ProgressBar progressBar=findViewById(R.id.progress);
         progressBar.setVisibility(View.VISIBLE);
         String url="";
