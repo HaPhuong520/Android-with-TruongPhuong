@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".login.SignUp"
+    android:orientation="vertical"
+    android:background="#f2f2f2">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="Vui lòng nhập thông tin của bạn !"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#E43A84"></TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:hint="Tên"></EditText>
+
+                <EditText
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Họ"
+                    android:id="@+id/edtSurname"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_margin="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:text="Tuổi :"
+                    android:textSize="19dp"
+                    ></TextView>
+                <EditText
+                    android:layout_margin="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:id="@+id/edtAge"></EditText>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tên tài khoản :"
+                    android:textStyle="bold"
+                    android:textSize="19dp"
+                    ></TextView>
+                <EditText
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/edtUsername"></EditText>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mật khẩu :"
+                    android:textStyle="bold"
+                    android:layout_margin="5dp"
+                    android:textSize="19dp"
+                    ></TextView>
+                <EditText
+                    android:lines="1"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:layout_margin="5dp"
+                    android:id="@+id/edtPassword">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nhập lại mật khẩu :"
+                    android:textStyle="bold"
+                    android:textSize="19dp"
+                    android:layout_margin="5dp"
+                    ></TextView>
+                <EditText
+                    android:lines="1"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:password="true"
+                    android:id="@+id/edtConFirmPassword">
+
+                </EditText>
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng ký"
+                android:id="@+id/btnSignUp1"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="50dp"
+                android:textColor="#300404"
+                android:background="@drawable/circle"
+                ></Button>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

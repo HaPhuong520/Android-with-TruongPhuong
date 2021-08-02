@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="Bạn cần ăn đầy đủ nhé"></TextView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:src="@drawable/thaptt"
+                android:layout_margin="5dp"></ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Ăn uống lành mạnh, đa dạng các loại thực phẩm."
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="- Tích cực vận động, thể dục để tăng cường sức khỏe."
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="- Tránh xa bia, rượu, thuốc lá và các chất kích thích."
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="   "/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

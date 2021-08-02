@@ -1,0 +1,82 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+    compileOptions.encoding = 'UTF-8'
+    defaultConfig {
+        applicationId "com.example.app"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding{
+        enabled=true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation group: 'com.android.volley', name: 'volley', version: '1.1.0'
+    //noinspection GradleCompatible
+    implementation group: 'com.android.support', name: 'design', version: '28.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    compile group: 'androidx.activity', name: 'activity', version: '1.2.0-beta02'
+    //Import
+    implementation 'gun0912.ted:tedpermission:2.2.3'
+    implementation 'gun0912.ted:tedbottompicker:1.2.6'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.google.code.gson:gson:2.8.7'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    // https://mvnrepository.com/artifact/cz.ackee.ui/TextInputLayout
+
+    //gif
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
+
+    //circle image
+    compile 'de.hdodenhof:circleimageview:3.1.0'
+
+    //tabLayout
+    implementation 'com.google.android.material:material:1.2.1'
+//    implementation 'me.relex:circleindicator:1.3.2'
+    implementation 'me.relex:circleindicator:2.1.6'
+
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+
+
+
+
+}

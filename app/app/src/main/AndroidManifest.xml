@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.app">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App">
+        <activity android:name=".mainlayout.Logo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".login.MainActivity">
+
+        </activity>
+
+        <activity android:name=".mainlayout.Welcome">
+
+        </activity>
+
+        <activity android:name=".mainlayout.Introduce">
+        </activity>
+
+        <activity android:name=".login.SignUp">
+        </activity>
+
+        <activity android:name=".mainlayout.ListFood">
+
+        </activity>
+
+        <activity android:name=".food.MainFood">
+        </activity>
+
+        <activity android:name=".mainlayout.ModeEat">
+        </activity>
+
+        <activity android:name=".mainlayout.TowerDD">
+
+        </activity>
+        <activity android:name=".modeeat.Chidren">
+
+
+        </activity>
+        <activity android:name=".modeeat.Adults">
+        </activity>
+        <activity android:name=".modeeat.Erderly">
+        </activity>
+        <activity android:name=".modeeat.LuaChonBenh">
+        </activity>
+        <activity android:name=".modeeat.sick.TimMach">
+
+        </activity>
+        <activity android:name=".modeeat.sick.HuyetApCao">
+
+        </activity>
+        <activity android:name=".modeeat.sick.HuyetApThap">
+
+        </activity>
+        <activity android:name=".modeeat.sick.Gout">
+
+        </activity>
+        <activity android:name=".modeeat.sick.MauNhiemMo">
+
+        </activity>
+        <activity android:name=".modeeat.sick.TieuDuong">
+
+        </activity>
+        <activity android:name=".modeeat.sick.ViemDaDay">
+
+        </activity>
+        <activity android:name=".modeeat.sick.KhongBenh">
+        </activity>
+        <activity android:name=".modeeat.bmi.Fat">
+        </activity>
+        <activity android:name=".modeeat.bmi.Thin">
+        </activity>
+        <activity android:name=".food.AddFood">
+        </activity>
+        <activity android:name=".modeeat.bmi.AdultsTower">
+        </activity>
+        <activity android:name=".modeeat.bmi.ChildrentTower">
+        </activity>
+        <activity android:name=".login.Profile">
+        </activity>
+
+
+
+
+    </application>
+
+</manifest>

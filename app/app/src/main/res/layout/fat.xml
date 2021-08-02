@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Bạn bị béo mất rồi, phải giảm cân cho đẹp thôi"></TextView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:src="@drawable/beo"
+                android:layout_margin="10dp"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Dù người béo cần giảm lượng thức ăn, nhưng cần đảm bảo nguyên tắc đủ lượng protein cần thiết cho cơ thể."
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="- Bạn cần lựa chọn các thực phẩm giàu protein và ít lipid như: Thịt ít mỡ, tôm, cua, cá, giò nạc, sữa đậu nành, pho mai gầy, trứng, đậu đỗ."
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="- Nên ăn cá nhiều hơn thịt."
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="- Ưu tiên ăn các món luộc, hấp, nướng ít dầu mỡ. "
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="- Nếu muốn uống sữa thì nên uống sữa dành cho người thừa cân béo phì hoặc sữa tách béo không đường, sữa giàu canxi, sữa chua ít hoặc không đường..."
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="- Kết hợp với chế độ ăn khoa học là các hoạt động thể dục."
+                ></TextView>
+            <pl.droidsonroids.gif.GifTextView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="90dp"
+                android:background="@drawable/anhdongbeo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="   "/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

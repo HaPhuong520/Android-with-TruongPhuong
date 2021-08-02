@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_btn"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vui lòng chọn nhóm người bạn muốn tra "
+            android:textSize="19dp"
+            android:textColor="#9C165C"
+            android:textStyle="italic"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_margin="20dp"
+        android:weightSum="2">
+        <ImageView
+            android:src="@drawable/baby"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/imgChildren"></ImageView>
+        <ImageView
+            android:src="@drawable/family"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgAdults"
+            android:layout_weight="1"></ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_margin="20dp"
+        android:weightSum="2">
+
+        <ImageView
+            android:src="@drawable/elderly"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/imgElderly"></ImageView>
+        <ImageView
+           android:src="@drawable/patient"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgSick"
+            android:layout_weight="1"></ImageView>
+    </LinearLayout>
+
+</LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="260dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="2">-->
+<!--        <ImageView-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/baby"-->
+<!--            android:id="@+id/imgChildren"/>-->
+<!--        <ImageView-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/family"-->
+<!--            android:id="@+id/imgAdults"/>-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="260dp">-->
+<!--        <ImageView-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/elderly"-->
+<!--            android:id="@+id/imgElderly"/>-->
+<!--        <ImageView-->
+<!--            android:layout_margin="15dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/patient"-->
+<!--            android:id="@+id/imgSick"/>-->
+<!--    </LinearLayout>-->
+
+

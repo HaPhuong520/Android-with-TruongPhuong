@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".mainlayout.Introduce"
+    android:background="@drawable/background">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Giới thiệu về ứng dụng :"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:textStyle="bold"></TextView>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bạn đã chán việc nghĩ xem 'Hôm nay ăn gì??'"
+                android:textColor="#EB0B0A0A"
+                android:layout_marginLeft="5dp"></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="- Hãy đến với chúng tôi, bạn sẽ có những trải nghiệm mới trong chính căn bếp của mình."
+                android:layout_marginLeft="15dp"
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="- Chúng tôi sẽ đem đến cho bạn công thức cho những món ngon đầy đủ dinh dưỡng."
+                android:layout_marginLeft="15dp"
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="- Bên cạnh đó, chúng tôi còn gửi đến bạn những 'lời khuyên' và chế độ ăn phù hợp với tình trạng sức khỏe, cơ thể của bạn ."
+                android:layout_marginLeft="15dp"
+                ></TextView>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chế độ ăn hợp lý theo tháp dĩnh dưỡng là :"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#000"
+                android:layout_marginLeft="15dp"
+                android:text="-Tháp dinh dưỡng bao gồm 6 nhóm thực phẩm chính: rau xanh và trái cây, sữa, thịt, đậu và các loại hạt, thực phẩm từ chất béo và tinh bột, đường."
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_marginLeft="15dp"
+                android:text="-Tùy theo từng độ tuổi, tình trạng sức khỏe mà mỗi người sẽ có những nhu cầu dinh dưỡng tương ứng."
+                ></TextView>
+            <TextView
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chúc các bạn sớm tìm được căn bếp cho riêng mình-tìm được người muốn cùng nhau 'Thu ăn măng trúc, đông ăn giá'."
+                android:textSize="20dp"
+                android:textColor="#7C2B2B"
+                android:textStyle="italic"></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
