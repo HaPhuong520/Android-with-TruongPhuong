@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onValidityChanged(boolean isValidNumber) {
                if (isValidNumber){
-                   imgCheck.setImageDrawable(R.drawable.dung);
+                   imgCheck.setImageResource(R.drawable.dung);
                } else {
-                   imgCheck.setImageDrawable(R.drawable.sai);
+                   imgCheck.setImageResource(R.drawable.sai);
                }
             }
         });

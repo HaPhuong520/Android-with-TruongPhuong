@@ -17,7 +17,7 @@
         app:ccp_countryPreference="VN"/>
     <EditText
         android:id="@+id/edt_phone_number"
-        android:layout_width="350dp"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ccp"
         android:hint="Phone number"
@@ -29,10 +29,9 @@
         android:id="@+id/img_check"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@drawable/dung"
+        android:src="@drawable/sai"
         android:layout_toRightOf="@+id/edt_phone_number"
         android:layout_below="@id/ccp"
         android:layout_marginTop="15dp"
-        android:layout_marginLeft="5dp"
         android:visibility="gone"/>
 </RelativeLayout>
