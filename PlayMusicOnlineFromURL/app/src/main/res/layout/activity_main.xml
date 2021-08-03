@@ -48,6 +48,10 @@
             android:textSize="18sp"
             />
     </LinearLayout>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="Chạy"></Button>
 
 
 </LinearLayout>
