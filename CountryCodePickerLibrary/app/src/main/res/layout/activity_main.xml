@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ccp_textGravity="LEFT"
+        app:ccp_showFullName="true"
+        app:ccp_defaultNameCode="VN"
+        app:ccp_defaultLanguage="VIETNAMESE"
+        app:ccp_countryPreference="VN"/>
+
+
+</LinearLayout>
