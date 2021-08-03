@@ -58,10 +58,28 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+        mediaPlayer.setOnBufferingUpdateListener(new MediaPlayer.OnBufferingUpdateListener() {
+            @Override
+            public void onBufferingUpdate(MediaPlayer mp, int percent) {
+                playerSeekBar.setSecondaryProgress(percent);
+            }
+        });
+
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                playerSeekBar.setProgress(0);
+                imagePlayPause.setImageResource(R.drawable.ic_baseline_play_circle_filled_24);
+                textCurrentTime.setText(R.string.zero);
+                textTotalDuration.setText(R.string.zero);
+                mediaPlayer.reset();
+                prepareMediaPlayer();
+            }
+        });
     }
     private void prepareMediaPlayer(){
         try {
-            mediaPlayer.setDataSource("https://drive.google.com/file/d/1MBQQIDOBtB6uJ1KjqsX1LiFX7MdhJnaY/view");
+            mediaPlayer.setDataSource("https://www.mediafire.com/file/v7b7n2nrfo76ga1/vietsub_mua_ha_thoang_qua_live_vuong_tinh_van_khong_map_cover_-220003900557981605.mp3");
             mediaPlayer.prepare();
             textTotalDuration.setText(milliSecondsToTimer(mediaPlayer.getDuration()));
         }catch (Exception e){
