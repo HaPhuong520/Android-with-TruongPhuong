@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void prepareMediaPlayer(){
         try {
-            mediaPlayer.setDataSource("https://github.com/HaPhuong520/Android-with-TruongPhuong/blob/main/vietsub_mua_ha_thoang_qua_live_vuong_tinh_van_khong_map_cover_-220003900557981605.mp3");
+            mediaPlayer.setDataSource("https://cdn.uploader-assets.win/user-uploads/4757/04-Aug-2021/04-Aug-2021/mp3.mp3");
             mediaPlayer.prepare();
             textTotalDuration.setText(milliSecondsToTimer(mediaPlayer.getDuration()));
         }catch (Exception e){
