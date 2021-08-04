@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         });
         prepareMediaPlayer();
         playerSeekBar.setOnTouchListener(new View.OnTouchListener() {
-            @SuppressLint("ClickableViewAccessibility")
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 SeekBar seekBar= (SeekBar) v;
@@ -72,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 imagePlayPause.setImageResource(R.drawable.ic_baseline_play_circle_filled_24);
                 textCurrentTime.setText(R.string.zero);
                 textTotalDuration.setText(R.string.zero);
-                mediaPlayer.reset();
+                mp.reset();
                 prepareMediaPlayer();
             }
         });
@@ -96,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     };
     private  void updateSeekBar(){
         if(mediaPlayer.isPlaying()){
-            playerSeekBar.setProgress((mediaPlayer.getCurrentPosition()/mediaPlayer.getDuration())*100);
+            playerSeekBar.setProgress((int) (((float) mediaPlayer.getCurrentPosition()) / mediaPlayer.getDuration()) * 100);
             handler.postDelayed(updater,1000);
         }
     }
