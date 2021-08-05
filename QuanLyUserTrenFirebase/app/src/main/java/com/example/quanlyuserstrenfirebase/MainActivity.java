@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -82,6 +83,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 replaceFragment(new FavoriteFragment());
                 mCurrentFragment=FRAGMENT_FAVORITE;
             }
+        }else if(id==R.id.nav_sign_out) {
+            FirebaseAuth.getInstance().signOut();
+            Intent intent=new Intent(MainActivity.this,SignInActivity.class);
+            startActivity(intent);
+            finish();
         }
         mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;

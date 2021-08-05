@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
+        android:id="@+id/email"
         android:inputType="textEmailAddress"
         android:textColor="@color/black"
         android:maxLength="100"
@@ -19,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
+        android:id="@+id/password"
         android:inputType="textPassword"
         android:imeOptions="actionDone"
         android:layout_marginTop="10dp"
@@ -28,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="sign in"
+        android:id="@+id/sign_in"
         android:layout_marginTop="30dp"/>
     <LinearLayout
         android:id="@+id/layout_sign_up"
