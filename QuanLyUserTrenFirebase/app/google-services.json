@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "917391830844",
+    "project_id": "fir-inandroid-19a9d",
+    "storage_bucket": "fir-inandroid-19a9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917391830844:android:3ff95babd85deed83f3839",
+        "android_client_info": {
+          "package_name": "com.example.quanlyuserstrenfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917391830844-c9a59du0pfi35ef5f5sjv4u5k975kgon.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quanlyuserstrenfirebase",
+            "certificate_hash": "bacf17cef1a4553c899ee2bb2a436052ca53cf91"
+          }
+        },
+        {
+          "client_id": "917391830844-a63vjr782i6t2jkivag7jdl6kn41b7ch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0Uw9rH87w9l7-2XKwXuhDEqb_tRU1lBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917391830844-a63vjr782i6t2jkivag7jdl6kn41b7ch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
