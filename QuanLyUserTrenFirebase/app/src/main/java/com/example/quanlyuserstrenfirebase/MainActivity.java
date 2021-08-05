@@ -9,13 +9,21 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+
+import com.bumptech.glide.Glide;
 import com.example.quanlyuserstrenfirebase.fragment.FavoriteFragment;
 import com.example.quanlyuserstrenfirebase.fragment.HistoryFragment;
 import com.example.quanlyuserstrenfirebase.fragment.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -24,6 +32,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static final int FRAGMENT_HISTORY=2;
     private int mCurrentFragment=FRAGMENT_HOME;
     private DrawerLayout mDrawerLayout;
+    private NavigationView mNavigationView;
+
+    private ImageView imgAvt;
+    private TextView tvName,tvEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +46,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,mDrawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         mDrawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        NavigationView navigationView=findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        initUi();
+        mNavigationView.setNavigationItemSelectedListener(this);
         replaceFragment(new HomeFragment());
-        navigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
+        mNavigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
+
+
+        showUserInformation();
 
     }
 
+    private void initUi(){
+        mNavigationView=findViewById(R.id.navigation_view);
+        imgAvt=mNavigationView.getHeaderView(0).findViewById(R.id.img_avatar);
+        tvName=mNavigationView.getHeaderView(0).findViewById(R.id.tv_name);
+        tvEmail=mNavigationView.getHeaderView(0).findViewById(R.id.tv_email);
+    }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
@@ -78,6 +99,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.content_frame,fragment);
         transaction.commit();
+    }
+    private void showUserInformation(){
+        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+        if(user==null){
+            return ;
+        }
+        else
+        {
+            String name = user.getDisplayName();
+            String email = user.getEmail();
+            Uri photoUrl = user.getPhotoUrl();
+            if(name==null){
+                tvName.setVisibility(View.GONE);
+            }else{
+                tvName.setVisibility(View.VISIBLE);
+                tvName.setText(name);
+            }
+
+            tvEmail.setText(email);
+            Glide.with(this).load(photoUrl).error(R.drawable.ic_my_profile).into(imgAvt);
+        }
     }
 
 }

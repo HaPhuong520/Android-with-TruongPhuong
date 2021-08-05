@@ -1,5 +1,6 @@
 package com.example.quanlyuserstrenfirebase;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,6 +24,7 @@ import static android.content.ContentValues.TAG;
 public class SignUpActivity extends AppCompatActivity {
     private EditText edtEmail,edtPassword;
     private Button btnSignUp;
+    private ProgressDialog progressDialog;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class SignUpActivity extends AppCompatActivity {
         edtEmail=findViewById(R.id.edt_email);
         edtPassword=findViewById(R.id.edt_password);
         btnSignUp=findViewById(R.id.btn_sign_up);
+        progressDialog=new ProgressDialog(this);
     }
     private void initListener(){
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +48,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void onClickSignUp() {
+        progressDialog.show();
         String email=edtEmail.getText().toString().trim();
         String password=edtPassword.getText().toString().trim();
         FirebaseAuth mAuth=FirebaseAuth.getInstance();
@@ -53,6 +57,7 @@ public class SignUpActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            progressDialog.dismiss();
                             // Sign in success, update UI with the signed-in user's information
 
 
