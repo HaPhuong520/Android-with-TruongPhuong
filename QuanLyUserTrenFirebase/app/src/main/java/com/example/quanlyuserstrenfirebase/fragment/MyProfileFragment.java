@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,7 @@ public class MyProfileFragment extends Fragment {
     private View mView;
     private ImageView imgAvatar;
     private EditText edtFullName,edtEmail;
-    private Button btnUpdateProfile;
+    private Button btnUpdateProfile, btnUpdateEmail;
     Uri mUri;
     private  MainActivity mMainActivity;
     private ProgressDialog dialog;
@@ -56,6 +57,7 @@ public class MyProfileFragment extends Fragment {
         edtFullName=mView.findViewById(R.id.edt_full_name);
         edtEmail=mView.findViewById(R.id.edt_email);
         btnUpdateProfile=mView.findViewById(R.id.btn_update_profile);
+        btnUpdateEmail = mView.findViewById(R.id.btn_update_email);
     }
     private void setUserInformation() {
 
@@ -82,6 +84,12 @@ public class MyProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 onClickUpdatePrifile();
+            }
+        });
+        btnUpdateEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickUpdateEmail();
             }
         });
     }
@@ -133,5 +141,23 @@ public class MyProfileFragment extends Fragment {
                         }
                     }
                 });
+    }
+    private void onClickUpdateEmail(){
+        String strNewEmail = edtEmail.getText().toString().trim();
+        dialog.show();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        user.updateEmail(strNewEmail)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            dialog.dismiss();
+                            Toast.makeText(getActivity(),"User mail address updated.",Toast.LENGTH_SHORT).show();
+                            mMainActivity.showUserInformation();
+                        }
+                    }
+                });
+
     }
 }

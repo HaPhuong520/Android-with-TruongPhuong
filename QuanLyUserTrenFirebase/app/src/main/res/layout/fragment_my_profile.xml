@@ -31,5 +31,11 @@
         android:layout_height="wrap_content"
         android:text="Update profile"
         android:layout_marginTop="30dp"/>
+    <Button
+        android:id="@+id/btn_update_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update email"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>

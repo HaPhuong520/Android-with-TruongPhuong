@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 
 import com.bumptech.glide.Glide;
+import com.example.quanlyuserstrenfirebase.fragment.ChangePasswordFragment;
 import com.example.quanlyuserstrenfirebase.fragment.FavoriteFragment;
 import com.example.quanlyuserstrenfirebase.fragment.HistoryFragment;
 import com.example.quanlyuserstrenfirebase.fragment.HomeFragment;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static final int FRAGMENT_FAVORITE=1;
     private static final int FRAGMENT_HISTORY=2;
     private static final int FRAGMENT_MY_FROFILE=3;
+    private static final int FRAGMENT_CHANGE_PASSWORD = 4;
     private int mCurrentFragment=FRAGMENT_HOME;
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
@@ -128,6 +130,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             if(mCurrentFragment!=FRAGMENT_MY_FROFILE){
                 replaceFragment(mMyProfileFragment);
                 mCurrentFragment=FRAGMENT_MY_FROFILE;
+            }
+        }
+        else if(id==R.id.nav_change_password) {
+            if(mCurrentFragment!=FRAGMENT_CHANGE_PASSWORD){
+                replaceFragment(new ChangePasswordFragment());
+                mCurrentFragment=FRAGMENT_CHANGE_PASSWORD;
             }
         }
         mDrawerLayout.closeDrawer(GravityCompat.START);
