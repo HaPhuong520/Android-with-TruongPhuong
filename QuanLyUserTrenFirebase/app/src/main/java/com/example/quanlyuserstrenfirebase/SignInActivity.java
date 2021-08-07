@@ -28,6 +28,7 @@ public class SignInActivity extends AppCompatActivity {
     private EditText edtEmail,edtPassword;
     private Button btnSignIn;
     private ProgressDialog progressDialog;
+    private LinearLayout layoutForgotPassword;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,7 @@ public class SignInActivity extends AppCompatActivity {
         edtPassword=findViewById(R.id.password);
         btnSignIn=findViewById(R.id.sign_in);
         progressDialog=new ProgressDialog(this);
+        layoutForgotPassword=findViewById(R.id.layout_forgot_password);
     }
     private void initListener(){
         layoutSignUp.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +58,12 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onClickSignIn();
+            }
+        });
+        layoutForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickForgotPassword();
             }
         });
     }
@@ -82,6 +90,23 @@ public class SignInActivity extends AppCompatActivity {
                             Toast.makeText(SignInActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
 
+                        }
+                    }
+                });
+    }
+    private void onClickForgotPassword() {
+        progressDialog.show();
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        String emailAddress = "phuongtruong472001@gmail.com";
+
+        auth.sendPasswordResetEmail(emailAddress)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        progressDialog.show();
+                        if (task.isSuccessful()) {
+
+                            Toast.makeText(SignInActivity.this,"Email sent",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
