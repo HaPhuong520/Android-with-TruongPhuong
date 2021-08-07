@@ -103,7 +103,7 @@ public class SignInActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        progressDialog.show();
+                        progressDialog.dismiss();
                         if (task.isSuccessful()) {
 
                             Toast.makeText(SignInActivity.this,"Email sent",Toast.LENGTH_SHORT).show();
