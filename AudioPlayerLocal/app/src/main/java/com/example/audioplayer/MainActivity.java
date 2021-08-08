@@ -148,6 +148,8 @@ public class MainActivity extends AppCompatActivity {
                 btPlay.setVisibility(View.VISIBLE);
                 // set media player ve dau
                 mediaPlayer.seekTo(0);
+                // Stop animation circle image
+                stopAnimation();
             }
         });
     }

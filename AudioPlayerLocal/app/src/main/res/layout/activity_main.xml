@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="#EC9F9F">
+    android:background="#ECC0C0">
 
   <de.hdodenhof.circleimageview.CircleImageView
       android:id="@+id/img"
